@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href=" {% static 'cor/css/all.min.css' %} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=" {% static 'cor/css/bootstrap.css' %} ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    {% block corecss %}
+    <link rel="stylesheet" href=" {% static 'cor/css/cor.css' %} ">
+    {% endblock corecss %}
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+                  {% if messages %}
+                    {% for message in messages %}
+                     <div class='alert alert-success my2' id='msg' role='alert' aria-hidden='true'> 
+                    {{ message}}
+                    </div>
+                        {% endfor %}
+                    {% endif %}
+        <div class="row">
+            <div class="col-sm-2">
+             {% include 'cor/sidebar.html' %}
+            </div>
+
+            <div class="col-sm-10">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+
+         <div class="text-center">
+                <a href="https://www.facebook.com/profile.php?id=100009464748284" target="_blank" class="">
+                <i class="fa fa-facebook-f fa-2x i-coolor mr-3"></i>
+
+                </a>
+                <a href="https://www.instagram.com/diwaekaer/" target="_blank" class="">
+                    <i class="fa fa-instagram fa-2x i-coolor mr-3"></i>
+                </a>
+                <a href="https://twitter.com/home?lang=en-gb" target="_blank" class="">
+                    <i class="fa fa-twitter fa-2x i-coolor mr-3"></i>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="">
+                    <i class="fa fa-envelope fa-2x i-color mr-3"></i>
+                <hr class="my3" color="black"> 
+                        <p>PRIVACY-POLICY | TERMS OF USE</p>
+
+                    <p>Copyright
+                        <i class="fa fa-copyright i-color mr-3"></i>jhadiwakar27@gmail.com
+                    </p>
+
+
+            </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

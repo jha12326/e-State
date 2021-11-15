@@ -1,0 +1,16 @@
+      {% if messages %}
+    {% for message in messages %}
+        <div class='alert alert-success my2' id='msg' role='alert' aria-hidden='true'> 
+            {{ message}}
+            </div>
+    {% endfor %}
+{% endif %}
+
+
+
+
+
+                              <div class="text-center">
+                                 <img src=" {% static 'cor/images/office.jpg' %} " alt="profile pic"
+                                          class = "img-thundnail" width="80%" height="70%" >  
+                              </div>

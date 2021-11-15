@@ -1,0 +1,15 @@
+{% load static %}
+<div class="rightb h-100">
+    <div class="text-center">
+     <i class="fa fa-apple fa-4x mt-3 fa-spin mr-3"></i>
+    </div>
+    <h3 class="text-white mt-3 st-font text-center">Apple</h3>
+        <hr class="border">
+            <nav class="nav flex-column text-centre">
+                <a href="/" class="nav-link {{home}}">Home</a>
+                <a href=" {% url 'services' %} " class="nav-link {{services}} ">Services</a>
+                <a href=" {% url 'skill' %} " class="nav-link {{skill}} ">
+                    Skills</a>
+                <a href="{% url 'contact' %}" class="nav-link {{contact}} ">Contact-us</a>
+            </nav>
+</div>   

@@ -1,0 +1,67 @@
+{% extends 'cor/base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-warning mb-5 border-bottom">Contact-us</h1>
+    <div class="row text-white mb-5">
+        <p class="max-auto mb-5">
+            Do you have any questions? please don't hesitate to contact us.
+            i will try to contact to contact you within an hour to help you.
+        </p>
+        <div class="col-sm-9 mb-5">
+            <form action="" novalidate>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Input-Name">Your name</label>
+                        <input type="text" class="form-control" id="Input-Name"/>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Input-Email">Your Email*</label>
+                        <input type="text" class="form-control" id="Input-Name" required/>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Input-Email">Your Subject*</label>
+                        <input type="text" class="form-control" id="Input-Name" required/>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Input-Email">Your Message*</label>
+                        <input type="text" class="form-control" id="Input-Name" required/>
+                    </div>
+                </div>
+                <a href="{% url 'home' %}"> <button class="btn btn-primary" type="button"> Send </button></a>
+                <a href=" {% url 'home' %} "> <button class="btn btn-primary" type="button">Back</button></a>
+            </form>
+        </div>
+        <div class="col-sm-3 text-center">
+            <ul class="list-unstyled">
+                <li>
+                    <a href="https://www.google.com/maps/place/Deoghar,+Jharkhand/@24.4741375,86.6301657,12z/data=!3m1!4b1!4m5!3m4!1s0x39f116280f130f01:0xed8ba5a38d873e4b!8m2!3d24.485179!4d86.694785" target="blank" >
+                        <i class="fa fa-location-arrow mt-4 fa-2x i-color"></i>
+                        <p>Deoghar,Jharkhand</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/diwakar-jha-468152211/"  target="blank">
+                        <i class="fa fa-linkedin"></i>
+                        <p>LinkedIn-Profile</p>
+                    </a>
+                </li>
+                <li>
+                   <a href="https://mail.google.com/mail/u/0/#inbox"  target="blank">
+                    <i class="fa fa-envelope mt-4 fa-2x i-color"></i>
+
+                    <p>
+                        jhadiwakar27@gmail.com
+                    </p>
+                   </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock content %}
